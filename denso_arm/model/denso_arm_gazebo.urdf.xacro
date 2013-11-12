@@ -15,9 +15,9 @@
     <visual>
       <origin xyz="0 0 0.098" rpy="0 0 0" />
       <geometry >
-	<mesh filename="package://denso_arm/meshes/" />
+        <mesh filename="package://denso_arm/meshes/" />
       </geometry>
-      <material name="denso_light_gray" />
+      <material name="DensoLightGray" />
     </visual>
      <inertial>
         <mass value="9"/>
@@ -29,9 +29,9 @@
     <visual>
       <origin xyz="0 0 0.06" rpy="0 0 0" />
       <geometry >
-	<mesh filename="package://denso_arm/meshes" />
+        <mesh filename="package://denso_arm/meshes" />
       </geometry>
-      <material name="denso_light_gray" />
+      <material name="DensoLightGray" />
      </visual>
      <inertial>
         <mass value="8"/>
@@ -45,7 +45,7 @@
     <origin xyz="0 0 0.198" rpy="0 0 1.57" />
     <axis xyz="0 0 1" />
     <limit lower="-2.967" upper="2.967" effort="10"
-	   velocity="1.0" />
+           velocity="1.0" />
     <joint_properties damping="0.0" friction="0.0"/>
   </joint>
 
@@ -53,7 +53,7 @@
     <visual>
       <origin xyz="0 0 0.225" rpy="0 0 0" />
       <geometry >
-	<mesh filename="package://denso_arm/meshes" />
+        <mesh filename="package://denso_arm/meshes" />
       </geometry>
       <material name="denso_med_gray" />
     </visual>
@@ -69,7 +69,7 @@
     <origin xyz="0 0 0.190" rpy="0 0 0" />
     <axis xyz="1 0 0" />
     <limit lower="-1.745" upper="2.356" effort="10"
-	   velocity="1.0" />
+           velocity="1.0" />
     <joint_properties damping="0.0" friction="0.0"/>
   </joint>
 
@@ -77,7 +77,7 @@
     <visual>
       <origin xyz="0 0 0.1425" rpy="0 0 0" />
       <geometry >
-	<mesh filename="package://denso_arm/meshes" />
+        <mesh filename="package://denso_arm/meshes" />
       </geometry>
       <material name="denso_dark_gray" />
     </visual>
@@ -93,7 +93,7 @@
     <origin xyz="0 0 0.450" rpy="0 0 0" />
     <axis xyz="1 0 0" />
     <limit lower="-2.094" upper="2.670" effort="10"
-	   velocity="1.0" />
+           velocity="1.0" />
     <joint_properties damping="0.0" friction="0.0"/>
   </joint>
 
@@ -101,9 +101,9 @@
     <visual>
       <origin xyz="0 0 0.0675" rpy="0 0 0" />
       <geometry >
-	<mesh filename="package://denso_arm/meshes" />
+        <mesh filename="package://denso_arm/meshes" />
       </geometry>
-      <material name="denso_light_gray" />
+      <material name="DensoLightGray" />
     </visual>
        <inertial>
         <mass value="5"/>
@@ -117,7 +117,7 @@
     <origin xyz="0 0 0.285" rpy="0 0 0" />
     <axis xyz="0 0 1" />
     <limit lower="-4.712" upper="4.712" effort="10"
-	   velocity="1.0" />
+           velocity="1.0" />
     <joint_properties damping="0.0" friction="0.0"/> 
  </joint>
 
@@ -125,9 +125,9 @@
     <visual>
       <origin xyz="0 0 0.045" rpy="0 0 0" />
       <geometry >
-	<mesh filename="package://denso_arm/meshes" />
+        <mesh filename="package://denso_arm/meshes" />
       </geometry>
-      <material name="denso_light_gray" />
+      <material name="DensoLightGray" />
     </visual>
        <inertial>
         <mass value="4"/>
@@ -141,7 +141,7 @@
     <origin xyz="0 0 0.135" rpy="0 0 0" />
     <axis xyz="1 0 0" />
     <limit lower="-2.094" upper="2.094" effort="10"
-	   velocity="1.0" />
+           velocity="1.0" />
     <joint_properties damping="0.0" friction="0.0"/>
   </joint>
 
@@ -149,9 +149,9 @@
     <visual>
       <origin xyz="0 0 0.0005" rpy="0 0 0" />
       <geometry >
-	<mesh filename="package://denso_arm/meshes" />
+        <mesh filename="package://denso_arm/meshes" />
       </geometry>
-      <material name="denso_light_gray" />
+      <material name="DensoLightGray" />
     </visual>
        <inertial>
         <mass value="2"/>
@@ -165,7 +165,10 @@
     <origin xyz="0 0 0.090" rpy="0 0 0" />
     <axis xyz="0 0 1" />
     <limit lower="-6.283" upper="6.283" effort="10"
-	   velocity="1.0" />
+           velocity="1.0" />
     <joint_properties damping="0.0" friction="0.0"/>
   </joint>
 </robot>
+
+
+
