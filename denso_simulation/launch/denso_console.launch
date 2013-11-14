@@ -1,0 +1,39 @@
+<launch>
+
+  <!-- Launch gazebo with custom world --> 
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find irk_simulation)/model/master_console.world"/>
+    <arg name="debug" value="false" />
+    <arg name="gui" value="true" />
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="headless" value="false"/>
+  </include> 
+
+    <!-- Load the URDF into the ROS Parameter Server -->
+    <param name="robot_description" 
+      command="$(find xacro)/xacro.py '$(find irk_simulation)/model/master_console_gazebo.urdf.xacro'" />
+
+    <!-- Call a python script to the run a service call to gazebo_ros to spawn a URDF robot -->  
+    <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+      args="-urdf -model master_console -param robot_description"/>
+
+    <!-- Create a state publisher to broadcast TF frames -->
+    <node name="right_robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+
+    <!-- Load and start controllers by default -->
+    <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+      output="screen" ns="/davinci_master"
+      args="--namespace=/davinci_master 
+      joint_state_controller
+      left_joint_position_controller
+      "/> 
+
+    <!-- Load controller parameters -->
+    <rosparam 
+      file="$(find irk_simulation)/launch/controllers.yaml"/>
+
+</launch>
+
+
+
