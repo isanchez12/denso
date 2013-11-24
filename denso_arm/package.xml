@@ -1,0 +1,22 @@
+<package>
+  <name>denso_arm</name>
+  <version>0.0.0</version>
+  <description>The denso arm 6 dof package</description>
+
+  <maintainer email="ish.sanchez12@gmail.com">Ish Sanchez</maintainer>
+
+   <license>BSD</license>
+
+
+   <author email="ish.sanchez12@gmail.com">Ish SAnchez</author>
+
+   <buildtool_depend>catkin</buildtool_depend>
+
+   <export>
+   </export>
+   </package>
+
+
+
+
+
