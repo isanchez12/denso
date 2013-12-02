@@ -13,7 +13,9 @@ find_package(catkin REQUIRED COMPONENTS gazebo_ros)
 ## LIBRARIES: libraries you create in this project that dependent projects also need
 catkin_package(
     DEPENDS 
-        CATKIN_DEPENDS # TODO
-            INCLUDE_DIRS # TODO include
-                LIBRARIES # TODO
-                )
+    CATKIN_DEPENDS # TODO
+     INCLUDE_DIRS # TODO include
+     LIBRARIES # TODO
+ )
+
+

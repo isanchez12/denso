@@ -1,21 +1,22 @@
 <package>
   <name>denso_simulation</name>
-    <version>0.1.0</version>
-      <description>denso_simulation</description>
-        <maintainer email="ish.sanchez@gmail.com">Ish Sanchez</maintainer>
+  <version>0.1.0</version>
+  <description>denso_simulation</description>
+  <maintainer email="ish.sanchez@gmail.com">Ish Sanchez</maintainer>
 
-    <license>BSD</license>
+  <license>BSD</license>
+  <url type= "website"> http://github.com/isanchez12/denso</url>
 
-     <author email="ish.sanchez@gmail.com">Ish Sanchez</author>
+  <author email="ish.sanchez@gmail.com">Ish Sanchez</author>
 
-      <buildtool_depend>catkin</buildtool_depend>
+  <buildtool_depend>catkin</buildtool_depend>
 
-      <run_depend>denso_arm</run_depend>
-       <run_depend>gazebo_ros</run_depend> 
+  <run_depend>denso_arm</run_depend>
+  <run_depend>gazebo_ros</run_depend> 
 
-         <export>
-        </export>
-   </package>
+  <export>
+  </export>
+ </package>
 
 
 
