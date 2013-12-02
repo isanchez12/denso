@@ -18,7 +18,7 @@
     <visual>
       <origin xyz="0 0 0.098" rpy="0 0 0" />
       <geometry >
-       <box size="0.195 0.195 0.195" />
+      <box size="0.195 0.195 0.195" />
       </geometry>
       <material name="orange" />
     </visual>
@@ -32,9 +32,9 @@
 
   <link name="link2">
     <visual>
-      <origin xyz="0 0 0.06" rpy="0 0 0" />
+            <origin xyz="0 0 0.06" rpy="0 0 0" />
       <geometry >
-     <box size="0.100 0.100 0.120" /> 
+       <box size="0.100 0.100 0.120" /> 
       </geometry>
       <material name="black" />
      </visual>
@@ -44,10 +44,10 @@
       </inertial> 
   </link>
 
-  <joint name="denso_J0" type="revolute">
+  <joint name="joint1" type="revolute">
     <parent link="link1"/>
     <child link="link2"/>
-    <origin xyz="0 0 0.198" rpy="0 0 1.57" />
+       <origin xyz="0 0 0.198" rpy="0 0 1.57" />
     <axis xyz="0 0 1" />
     <limit lower="-2.967" upper="2.967" effort="10"
            velocity="1.0" />
@@ -56,9 +56,9 @@
 
   <link name="link3">
     <visual>
-      <origin xyz="0 0 0.225" rpy="0 0 0" />
+       <origin xyz="0 0 0.225" rpy="0 0 0" />
       <geometry >
-        <box size="0.05 0.05 0.400" />
+      <box size="0.05 0.05 0.400" />
       </geometry>
       <material name="orange" />
     </visual>
@@ -68,15 +68,118 @@
       </inertial> 
   </link>
 
-  <joint name="denso_J1" type="revolute">
+  <joint name="joint2" type="revolute">
     <parent link="link2"/>
     <child link="link3"/>
-    <origin xyz="0 0 0.190" rpy="0 0 0" />
+      <origin xyz="0 0 0.190" rpy="0 0 0" />
     <axis xyz="1 0 0" />
     <limit lower="-1.745" upper="2.356" effort="10"
            velocity="1.0" />
     <joint_properties damping="0.0" friction="0.0"/>
   </joint>
+
+
+
+  <link name="link4">
+    <visual>
+            <origin xyz="0 0 0.1425" rpy="0 0 0" />
+      <geometry >
+      <box size="0.05 0.05 0.20" />
+      </geometry>
+      <material name="orange" />
+    </visual>
+        <inertial>
+        <mass value="7"/>
+        <inertia ixx="7.0" ixy="0.0" ixz="0.0" iyy="7.0" iyz="0.0" izz="7.0"/>
+      </inertial> 
+  </link>
+
+  <joint name="joint3" type="revolute">
+    <parent link="link3"/>
+    <child link="link4"/>
+     <origin xyz="0 0 0.450" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+     <limit lower="-2.094" upper="2.670" effort="10"
+                velocity="1.0" />
+    <joint_properties damping="0.0" friction="0.0"/>
+  </joint>
+
+
+
+  <link name="link5">
+    <visual>
+      <origin xyz="0 0 0.0675" rpy="0 0 0" />
+      <geometry >
+       <box size="0.05 0.05 0.10" />
+      </geometry>
+      <material name="orange" />
+    </visual>
+        <inertial>
+        <mass value="7"/>
+        <inertia ixx="7.0" ixy="0.0" ixz="0.0" iyy="7.0" iyz="0.0" izz="7.0"/>
+      </inertial> 
+  </link>
+
+  <joint name="joint4" type="revolute">
+    <parent link="link4"/>
+    <child link="link5"/>
+    <origin xyz="0 0 0.285" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-4.712" upper="4.712" effort="10"
+               velocity="1.0" />
+    <joint_properties damping="0.0" friction="0.0"/>
+  </joint>
+
+
+  <link name="link6">
+    <visual>
+       <origin xyz="0 0 0.045" rpy="0 0 0" />
+      <geometry >
+      <box size="0.03 0.03 0.08" />
+      </geometry>
+      <material name="orange" />
+    </visual>
+        <inertial>
+        <mass value="7"/>
+        <inertia ixx="7.0" ixy="0.0" ixz="0.0" iyy="7.0" iyz="0.0" izz="7.0"/>
+      </inertial> 
+  </link>
+
+  <joint name="joint5" type="revolute">
+    <parent link="link5"/>
+    <child link="link6"/>
+    <origin xyz="0 0 0.135" rpy="0 0 0" />
+        <axis xyz="1 0 0" />
+    <limit lower="-2.094" upper="2.094" effort="10"
+               velocity="1.0" />
+    <joint_properties damping="0.0" friction="0.0"/>
+  </joint>
+
+
+  <link name="link7">
+    <visual>
+      <origin xyz="0 0 0.0005" rpy="0 0 0" />
+      <geometry >
+        <box size="0.04 0.04 0.001" />
+      </geometry>
+      <material name="orange" />
+    </visual>
+        <inertial>
+        <mass value="7"/>
+        <inertia ixx="7.0" ixy="0.0" ixz="0.0" iyy="7.0" iyz="0.0" izz="7.0"/>
+      </inertial> 
+  </link>
+
+  <joint name="joint6" type="revolute">
+    <parent link="link6"/>
+    <child link="link7"/>
+     <origin xyz="0 0 0.090" rpy="0 0 0" />
+         <axis xyz="0 0 1" />
+             <limit lower="-6.283" upper="6.283" effort="10"
+                        velocity="1.0" />
+    <joint_properties damping="0.0" friction="0.0"/>
+  </joint>
+
 
 
 <transmission name="tran1">
